@@ -5,7 +5,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile
-    working_dir: "/go"
+    ports:
+     - "3000:8080"
     volumes:
-      - ./go/:/go
+      - ./src/:/go/src
     tty: true
